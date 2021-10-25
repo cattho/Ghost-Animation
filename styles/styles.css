@@ -1,0 +1,183 @@
+:root{
+	--fondo:#2c3a47;
+	--fantasma: #ffff;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: var(--fondo);	
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header{	
+	width: 80%;
+}
+
+.ghost{
+	width: 140px;
+	height: 160px;
+	background-color:var(--fantasma) ;
+	border-radius: 70px 70px 0 0;
+	position: relative;
+	cursor: pointer;
+	animation: movimiento 10s infinite linear;
+}
+
+.face{
+	width: 100px;
+	position: absolute;
+	top: 60px;
+	left: calc(50% - 50px);
+}
+
+.eyes{
+	height: 24px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 14px;
+}
+
+.eyes span{
+	width: 24px;
+	height: 24px;
+	background-color: var(--fondo);
+	border-radius: 50%;
+}
+
+.ghost:hover .eyes span{
+	height: 16px;
+}
+
+.mouth{
+	width: 40px;
+	height: 20px;
+	background-color: var(--fondo);
+	margin: auto;
+	border-radius: 0 0 20px 20px;
+}
+
+.ghost:hover .mouth{
+	height: 8px;
+}
+
+.hands{
+	width: 180px;
+	position: absolute;
+	left: -20px;
+	top: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.hands span{
+	width: 20px;
+	height: 30px;
+	background-color: var(--fantasma);
+}
+
+.hands span:first-child{
+	border-radius: 20px 0 0 20px;
+}
+
+.hands span:last-child{
+	border-radius: 0 20px 20px 0;
+}
+
+.feet{
+	position: absolute;
+	width: 100%;
+	bottom: -20px;
+	display: flex;
+}
+
+.feet span{
+	flex: 1;
+	height: 20px;
+	background-color: var(--fantasma);
+	border-radius: 0 0 20px 20px;
+}
+
+.feet span:first-child{
+	border-radius: 0 0 20px 12px;
+}
+
+.feet span:last-child{
+	border-radius: 0 0 12px 20px;
+}
+
+@keyframes movimiento {
+	0%   {
+		top:55%;
+		left: 50%;
+	}
+	5%   {
+		top:50%;
+	}
+	10%  {
+		top:55%;
+	}
+	15%  {
+		top:50%;
+	}
+	20%  {
+		top:55%;
+	}
+	25%  {
+		top:50%;
+		left: calc(100% - 135px);
+	}
+	30%  {
+		top:55%;
+	}
+	35%  {
+		top:50%;
+	}
+	40%  {
+		top:55%;
+	}
+	45%  {
+		top:50%;
+	}
+	50%  {
+		top:55%;
+		left: 50%;
+	}
+	55%  {
+		top:50%;
+	}
+	60%  {
+		top:55%;
+	}
+	65%  {
+		top:50%;
+	}
+	70%  {
+		top:55%;
+	}
+	75%  {
+		top:50%;
+		left: 135px;
+	}
+	80%  {
+		top:55%;
+	}
+	85%  {
+		top:50%;
+	}
+	90%  {
+		top:55%;
+	}
+	95%  {
+		top:50%;
+	}
+	100% {
+		top:55%;
+		left: 50%;
+	}
+}
+	
